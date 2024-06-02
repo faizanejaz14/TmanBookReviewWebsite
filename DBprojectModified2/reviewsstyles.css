@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('mobilebackground.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+/* For width 500px and larger: */
+@media only screen and (min-width: 500px) {
+    body {
+        background-image: url('aboutbackground.jpg');
+        background-attachment: fixed;
+        background-size: 100vw auto;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header {
+    background-color: #2F539B;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    position: relative;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile .dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 20px;
+    display: none;
+}
+.profile:hover .dropdown,
+.profile:focus .dropdown {
+    display: block;
+}
+.dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #2F539B;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+.book-info {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.book-info img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.book-details {
+    flex-grow: 1;
+}
+
+.book-details h2 {
+    margin: 0;
+}
+
+.book-details p {
+    margin: 5px 0;
+}
+
+.review-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews {
+    width: 100%;
+}
+
+.review {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.review p {
+    font-size: 0.9em;
+}
+
+.review .read-reviews {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #2F539B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.review .read-reviews:hover {
+    background-color: #1f3b6b;
+}
+
+footer {
+    background-color: #2F539B;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        margin-left: 0;
+    }
+
+    .logo {
+        margin-top: 20px;
+    }
+
+    .search-bar {
+        margin-top: 20px;
+    }
+
+    .search-bar button {
+        margin-top: 10px;
+    }
+
+    .navbar {
+        margin-top: 20px;
+    }
+
+    .book-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book-info img {
+        margin: 0 0 20px 0;
+    }
+
+    .book-details {
+        text-align: center;
+    }
+}

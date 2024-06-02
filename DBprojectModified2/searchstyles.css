@@ -1,0 +1,353 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('mobilebackground.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+/* For width 500px and larger: */
+@media only screen and (min-width: 500px) {
+    body {
+        background-image: url('aboutbackground.jpg');
+        background-attachment: fixed;
+        background-size: 100vw auto;
+    }
+}
+h1{
+    margin-left: 40vw;
+}
+header {
+    background-color: #2F539B;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    position: relative;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile .dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 20px;
+    display: none;
+}
+.profile:hover .dropdown,
+.profile:focus .dropdown {
+    display: block;
+}
+.dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #2F539B;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-results .book {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 80%; /* Adjust to fit image and details side by side */
+    display: flex;
+    flex-direction: row; /* Change flex direction to row */
+    text-align: left;
+}
+
+.search-results .book img {
+    width: auto; /* Ensure images are not shrunk in width */
+    max-width: 30%; /* Adjust maximum width of the image */
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px; /* Add margin between image and details */
+}
+
+.search-results .book .book-details {
+    flex-grow: 1;
+}
+
+.search-results .book h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.search-results .book p {
+    font-size: 0.9em;
+}
+
+.search-results .book .read-reviews {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #2F539B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-results .book .read-reviews:hover {
+    background-color: #1f3b6b;
+}
+
+.review-form {
+    margin-top: 10px;
+}
+
+.review-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.review-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.review-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.review-form button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 600px) {
+h1{
+    margin-left: 20vw;
+}
+ header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo img{
+   margin-left: 0%;
+}
+.logo {
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.search-bar {
+  margin-top: 20px; /* Adjust margin as needed */
+  margin-left: 3%;
+}
+.search-bar button{
+    margin-top: 10px;
+}
+.navbar {
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.profile {
+  margin-top: 20px; /* Adjust margin as needed */
+  margin-left: 5%;
+}
+.search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-results .book {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 600px; /* Limit width for better readability */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.search-results .book img {
+    width: 100%; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.search-results .book .book-details {
+    flex-grow: 1;
+}
+
+.search-results .book h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.search-results .book p {
+    font-size: 0.9em;
+}
+
+.search-results .book .read-reviews {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #2F539B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-results .book .read-reviews:hover {
+    background-color: #1f3b6b;
+}
+
+.review-form {
+    margin-top: 10px;
+}
+
+.review-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.review-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.review-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.review-form button:hover {
+    background-color: #555;
+}
+
+}
+

@@ -1,0 +1,318 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('mobilebackground.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+@media only screen and (min-width: 500px) {
+    body {
+        background-image: url('aboutbackground.jpg');
+        background-attachment: fixed;
+        background-size: 100vw auto;
+    }
+}
+
+header {
+    background-color: #2F539B;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    position: relative;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile .dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 20px;
+    display: none;
+}
+.profile:hover .dropdown,
+.profile:focus .dropdown {
+    display: block;
+}
+.dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #2F539B;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 200px;
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/******************************************/
+.slideshow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slideshow-container .whitebox {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 80%; /* Adjust to fit image and details side by side */
+    display: flex;
+    flex-direction: row; /* Change flex direction to row */
+    text-align: left;
+}
+
+.slideshow-container .whitebox a {
+    width: 100%; /* Adjust to fit image and details side by side */
+    height: 100%;
+    padding: 10px;
+}
+
+
+.slideshow-container .whitebox a img {
+    width: auto; /* Ensure images are not shrunk in width */
+    max-width: 100%; /* Adjust maximum width of the image */
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px; /* Add margin between image and details */
+}
+
+
+.slideshow-container .whitebox .description {
+    flex-grow: 1;
+}
+
+.slideshow-container .whitebox h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.slideshow-container .whitebox p {
+    font-size: 0.9em;
+}
+/******************************************/
+
+/*.slideshow-container {
+    max-width: 50%;
+    max-height: 50%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.slide .description {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 15px;
+    text-align: center;
+    width: 80%;
+}*/
+
+.active {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+@media screen and (max-width: 768px) {
+    .prev, .next {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        margin-left: 0;
+    }
+
+    .logo {
+        margin-top: 20px;
+    }
+
+    .search-bar {
+        margin-top: 20px;
+        margin-left: 50%;
+    }
+
+    .search-bar button {
+        margin-top: 10px;
+    }
+
+    nav {
+        margin-top: 20px;
+    }
+
+    .profile {
+        margin-top: 20px;
+    }
+.slideshow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slideshow-container .whitebox {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 600px; /* Limit width for better readability */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.slideshow-container .whitebox img {
+    width: 100vw; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.slideshow-container .whitebox .description {
+    flex-grow: 1;
+}
+
+.slideshow-container .whitebox h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.slideshow-container .whitebox p {
+    font-size: 0.9em;
+}
+
+}
